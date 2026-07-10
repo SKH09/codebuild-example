@@ -6,7 +6,7 @@ WORKDIR /app
 COPY requirements.txt .
 
 # 2. FIX: Install directly from the local copied file
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install -r requirements.txt
 
 # 3. Copy the rest of your application code
 COPY . .

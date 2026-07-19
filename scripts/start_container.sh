@@ -1,8 +1,8 @@
-#!bin/bash
+#!/bin/bash
 set -e
 
-# Pull the Docker image fron Docker Hub
+# Pull the latest image
 docker pull skh09/simple-python-flask-app
 
-# Run the Docker image as a container
-docker run -d -p 8000:8000 skh09/simple-python-flask-app
+# Run the container with a specific name so we can stop it later
+docker run -d -p 8000:8000 --name simple-python-flask-app skh09/simple-python-flask-app

@@ -1,10 +1,5 @@
 version: 0.2
-artifacts:
-  files:
-    - "appspec.yml"
-    - "app.py"
-    - "Dockerfile"
-    - "requirements.txt"
+
 env:
   parameter-store:
     DOCKER_REGISTRY_USERNAME: "/myfirstapp/docker-credentials/username"
@@ -26,3 +21,8 @@ phases:
   post_build:
     commands:
       - echo "build is successful!"
+artifacts:
+  files:
+    - 'appspec.yml'
+    - 'scripts/**/*'
+    - '**/*'
